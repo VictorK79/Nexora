@@ -37,9 +37,7 @@ header {
   justify-content: space-between;
   backdrop-filter: blur(3px);
 }
-#about-us {
-  background: #18b4ff;
-}
+
 header #menu,
 header #logo {
   display: flex;
@@ -286,6 +284,39 @@ header nav a:hover {
 .motivational p {
   margin-top: 1.5rem;
   font-size: 1.15rem;
+}
+.student img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
+}
+.student {
+  border-radius: 4rem;
+  padding: 12px;
+  background: #5d696e;
+  margin-bottom: 20px;
+}
+.review {
+  display: flex;
+  padding: 6px;
+  border-radius: 3.5rem;
+  background: #ffffff;
+}
+.review span {
+  margin: 1rem 0 0 4rem;
+  width: 80%;
+}
+#students-rating {
+  width: 100%;
+  background: #0d4661;
+  background: linear-gradient(0deg, rgba(13, 70, 97, 1) 0%, rgba(17, 114, 158, 1) 50%, rgba(24, 180, 255, 1) 100%);  justify-content: space-between;
+  align-items: normal;
+  flex-direction: column;
+  padding: 3rem 7.5%;
+}
+#students-rating .fa-solid {
+  color: gold;
 }
 @keyframes spin {
   from {

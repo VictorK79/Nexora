@@ -8,7 +8,7 @@
   --header-background: rgba(255, 255, 255, 0.5);
   --btn1: rgb(9, 146, 194);
   --btn1-transparent: rgba(9, 146, 194, 0.5);
-  --btn2: rgb(10, 196, 224);
+  --btn2: rgb(0, 255, 229);
   --btn2-transparent: rgba(10, 196, 224, 0.5);
   --background: rgb(246, 231, 188);
   --text-color: rgb(255, 255, 255);
@@ -17,7 +17,7 @@ body {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
-    height: 100vh;
+  height: 100vh;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -37,7 +37,7 @@ header {
   justify-content: space-between;
   backdrop-filter: blur(3px);
 }
-#cards {
+#about-us {
   background: #18b4ff;
 }
 header #menu,
@@ -100,14 +100,13 @@ header nav a:hover {
 }
 .top-background {
   background: linear-gradient(to bottom, rgb(253, 238, 199), white 90%);
-
 }
 .text-area {
   padding: 0.25rem;
   cursor: default;
   color: black;
   margin-top: 2.5rem;
-  width: 40%;
+  width: 40rem;
 }
 .text-area h1 {
   font-size: 4rem;
@@ -214,6 +213,80 @@ header nav a:hover {
   justify-content: center;
   animation: spin 10s linear infinite;
 }
+
+#cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.card {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  width: 25vw;
+  align-items: center;
+  height: 10vh;
+  padding: 1rem;
+  background: #0051cb58;
+  transition: background 0.25s;
+}
+.card a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.75rem;
+}
+.card:hover {
+  background:rgb(12, 213, 244);
+}
+#about-us {
+  width: 100%;
+  background: #18b4ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  flex-direction: column;
+  padding: 3rem 7.5%;
+}
+
+.presentation {
+  margin-bottom: 20vh;
+  display: flex;
+  background: rgba(175, 231, 255, 0.571);
+  padding: 32px;
+  border-radius: 8px;
+  color:rgb(1, 36, 48);
+  justify-content: space-between;
+  align-items: center;
+}
+#statistics p {
+  font-size: 1.2rem;
+}
+
+#statistics ul, #statistics li {
+  list-style-type: none;
+  font-size: 1.25rem;
+  line-height: 1.85rem;
+}
+
+#statistics {
+  width: 35%;
+  flex-direction: column;
+}
+.presentation span {
+  color: var(--btn1);
+}
+.motivational {
+  
+  max-width: 35%;
+}
+.motivational h1 {
+  font-size: 3.8rem;
+}
+.motivational p {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
 @keyframes spin {
   from {
     translate: -100%;
@@ -222,20 +295,24 @@ header nav a:hover {
     translate: 0;
   }
 }
-#cards {
-  width: 100%;
-  background: #18b4ff;
-  display: flex;
-  justify-content: space-between;
-  align-items: normal;
-  padding: 3rem 7.5%;
-}
 @media screen and (max-width: 600px) {
   header {
     padding: 1rem;
     flex-direction: column;
     align-items: center;
     width: 90%;
+  }
+  #cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .card {
+    font-size: 0.75rem;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
   #main {
     text-align: center;
@@ -272,5 +349,15 @@ header nav a:hover {
   }
   .slide img {
     scale: 0.5;
+  }
+  .presentation {
+    text-align: center;
+    flex-direction: column;
+  }
+  .presentation .motivational {
+    max-width: 100%;
+  }
+  .presentation img {
+    display: none;
   }
 }

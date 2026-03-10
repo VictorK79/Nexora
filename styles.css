@@ -5,14 +5,24 @@
   scroll-behavior: smooth;
 }
 :root {
-  --header-background: rgba(255, 255, 255, 0.5);
-  --btn1: rgb(9, 146, 194);
-  --btn1-transparent: rgba(9, 146, 194, 0.5);
-  --btn2: rgb(0, 255, 229);
-  --btn2-transparent: rgba(10, 196, 224, 0.5);
-  --background: rgb(246, 231, 188);
-  --text-color: rgb(255, 255, 255);
+  --header-bg: rgba(255, 255, 255, 0.55);
+  --bg-main: #18B4FF;
+  --bg-soft: #F6E7BC;
+  --bg-soft-review: #dbe7ff;
+  --bg-soft-dark: #12a0ed;
+  --bg-dark: #0d79b3;
+  --bg-card-dark: #0a98e4;
+  --primary: #0992C2;
+  --primary-transparent: rgba(9, 146, 194, 0.5);
+  --secondary: #1cdcc9;
+  --secondary-transparent: rgba(0, 255, 229, 0.35);
+  --primary-dark: #066D91;
+  --text-dark: #0D2233;
+  --text-light: #FFFFFF;
+  --border-soft: rgba(255, 255, 255, 0.35);
+  --white: #ffff;
 }
+
 body {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
@@ -22,7 +32,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
 header {
   z-index: 1;
   top: 1.5rem;
@@ -32,13 +41,18 @@ header {
   border-radius: 15px;
   padding: 1rem;
   width: 85%;
-  background: var(--header-background);
+  background: var(--header-bg);
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(3px);
+  transition: border-radius 0.3s ease, background 0.3s ease;
 }
 
-header #menu,
+#menu {
+  display: flex;
+  align-items: center;
+}
+
 header #logo {
   display: flex;
   align-items: center;
@@ -47,10 +61,10 @@ header #logo {
   cursor: default;
 }
 #logo span {
-  color: var(--btn2);
+  color: var(--secondary);
 }
 .btn-3 {
-  background: rgb(0, 143, 164);
+  background: var(--primary-dark);
   border-radius: 15px;
   border: 0;
   width: 6rem;
@@ -58,12 +72,13 @@ header #logo {
   transition: background 0.2s;
 }
 .btn-3 a {
-  color: white;
+  color: var(--text-light);
+  
 }
 
 .btn-3:hover {
   cursor: pointer;
-  background: rgb(10, 196, 224);
+  background: var(--primary);
 }
 header ul {
   display: flex;
@@ -77,11 +92,11 @@ header ul li {
 }
 header a {
   text-decoration: none;
-  color: black;
+  color: var(--text-dark);
   transition: color 0.2s;
 }
 header nav a:hover {
-  color: var(--btn1);
+  color: var(--bg-main);
 }
 #main {
   margin: 0 auto;
@@ -97,12 +112,12 @@ header nav a:hover {
   justify-content: space-between;
 }
 .top-background {
-  background: linear-gradient(to bottom, rgb(253, 238, 199), white 90%);
+  background: linear-gradient(to bottom, var(--bg-soft), white 90%);
 }
 .text-area {
   padding: 0.25rem;
   cursor: default;
-  color: black;
+  color: var(--text-dark);
   margin-top: 2.5rem;
   width: 40rem;
 }
@@ -128,33 +143,37 @@ header nav a:hover {
   border-radius: 15px;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-.text-area .btn-1 {
+.text-area .btn-1{
   width: 12rem;
   height: 4rem;
   border: 0;
   margin-top: 1.5rem;
   border-radius: 20px;
-  background: var(--btn1);
+  background: var(--primary);
 }
 .btn-2 i {
   margin-left: 0.5rem;
 }
 .text-area .btn-1:hover {
-  border: 3px solid var(--btn1);
-  background: var(--btn1-transparent);
+  border: 3px solid var(--border-soft);
+  background: var(--primary-transparent);
   cursor: pointer;
 }
+.btn-2:hover a, .btn-1:hover a {
+  color: var(--text-dark);
+}
+
 .text-area .btn-2 {
   width: 12rem;
   height: 4rem;
   border: 0;
   margin-top: 1.5rem;
   border-radius: 20px;
-  background: var(--btn2);
+  background: var(--secondary);
 }
 .btn-2:hover {
-  border: 3px solid var(--btn2);
-  background: var(--btn2-transparent);
+  border: 3px solid var(--border-soft);
+  background: var(--secondary-transparent);
   cursor: pointer;
 }
 .text-area .btn-1,
@@ -163,11 +182,11 @@ header nav a:hover {
 }
 .text-area a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--white);
   font-size: large;
 }
 .text-area span {
-  color: var(--btn2);
+  color: var(--secondary);
 }
 .buttons {
   display: flex;
@@ -176,7 +195,7 @@ header nav a:hover {
 #wave img {
   width: 100%;
   height: 50vh;
-  background: rgba(255, 255, 255, 1);
+  background: var(--white);
   padding: 0;
   margin: 0;
   display: block;
@@ -187,7 +206,6 @@ header nav a:hover {
   width: 100%;
   display: flex;
   overflow: clip;
-  background: rgba(255, 255, 255, 0.5);
 }
 .carousel::-webkit-scrollbar {
   display: none;
@@ -226,34 +244,35 @@ header nav a:hover {
   align-items: center;
   height: 10vh;
   padding: 1rem;
-  background: #0051cb58;
+  background: var(--bg-card-dark);
   transition: background 0.25s;
 }
 .card a {
-  color: black;
+  color: var(--text-light);
   text-decoration: none;
   font-size: 1.75rem;
 }
 .card:hover {
-  background:rgb(12, 213, 244);
+  background:var(--bg-dark);
 }
 #about-us {
   width: 100%;
-  background: #18b4ff;
+  background: var(--bg-main);
   display: flex;
   justify-content: space-between;
   align-items: normal;
   flex-direction: column;
   padding: 3rem 7.5%;
+  scroll-margin-top: 100px;
 }
 
 .presentation {
-  margin-bottom: 20vh;
+  margin-bottom: 12vh;
   display: flex;
-  background: rgba(175, 231, 255, 0.571);
+  background: var(--bg-soft-dark);
   padding: 32px;
-  border-radius: 8px;
-  color:rgb(1, 36, 48);
+  border-radius: 12px;
+  color:var(--text-dark);
   justify-content: space-between;
   align-items: center;
 }
@@ -272,7 +291,7 @@ header nav a:hover {
   flex-direction: column;
 }
 .presentation span {
-  color: var(--btn1);
+  color: var(--secondary);
 }
 .motivational {
   
@@ -289,23 +308,27 @@ header nav a:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  
+  margin: 0 0 0 1rem;
 }
 .student {
+  display: flex;
+  align-items: center;
   border-radius: 4rem;
   padding: 12px;
-  background: #5d696e;
+  background: var(--bg-dark);
   margin-bottom: 20px;
 }
 .review {
+  align-items: center;
   display: flex;
   padding: 6px;
   border-radius: 3.5rem;
-  background: #ffffff;
+  background: var(--bg-soft-review);
 }
 .review span {
   margin: 1rem 0 0 4rem;
   width: 80%;
+  font-size: 1.3rem;
 }
 #students-rating {
   width: 100%;
@@ -318,6 +341,85 @@ header nav a:hover {
 #students-rating .fa-solid {
   color: gold;
 }
+footer {
+  padding-top: 2rem;
+  background: #082230;
+  background: linear-gradient(0deg, rgba(8, 34, 48, 1) 50%, rgba(13, 70, 97, 1) 100%);
+  height: auto;
+  width: 100%;
+  display: flex;
+}
+.footer-middle a{
+  color: var(--text-light);
+  list-style: none;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.footer-middle ul{
+  line-height: 3.5rem;
+  list-style: none;
+}
+.footer-left {
+  width: 50%;
+  padding: 2rem;
+}
+.footer-right button {
+    padding: 0.3rem;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.footer-left a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+.footer-middle, .footer-right {
+  width: 25%;
+}
+
+.footer-left, .footer-middle, .footer-right {
+  color: var(--text-light);
+}
+.footer-right {
+  padding: 2rem;
+}
+.footer-middle {
+  padding: 2rem 0 2rem 0;
+}
+.footer-middle a:hover{
+ color: var(--secondary);
+}
+.footer-right input{
+  margin-top: 1rem;
+  height: 3rem;
+  border-radius: 10px;
+  width: 95%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.footer-left button {
+  margin-top: 0.5rem;
+  width: 20%;
+  height: 15%;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0;
+}
+.footer-left button:hover a {
+  color: var(--text-light);
+}
+.footer-left button:hover {
+  background: var(--primary-dark);
+}
+.footer-left h2{
+  font-size: 1.5rem;
+  width: 70%;
+}
+footer span {
+  color: var(--secondary);
+}
 @keyframes spin {
   from {
     translate: -100%;
@@ -327,11 +429,17 @@ header nav a:hover {
   }
 }
 @media screen and (max-width: 600px) {
+
   header {
     padding: 1rem;
     flex-direction: column;
     align-items: center;
     width: 90%;
+  }
+
+  header #menu, header ul {
+    line-height: 2rem;
+    flex-direction: column;
   }
   #cards {
     flex-direction: column;
@@ -388,7 +496,46 @@ header nav a:hover {
   .presentation .motivational {
     max-width: 100%;
   }
+  .motivational h1 {
+  font-size: 2.5rem;
+  }
   .presentation img {
+    display: none;
+  }
+  #statistics {
+    margin-top: 1.5rem;
+    width: 80%;
+  }
+  .review {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .review span {
+    margin: 0.8rem;
+    width: 100%;
+  }
+  #students-rating .fa-solid {
+    color: gold;
+    font-size: 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  .footer-left, .footer-right,.footer-left p {
+    text-align: center;
+    width: 100%;
+  }
+  .footer-left button, .footer-right button {
+    padding: 0.3rem;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .footer-middle {
     display: none;
   }
 }

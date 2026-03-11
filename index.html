@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <div class="top-background">
     <section id="main">
       <div class="pagina-principal">
@@ -17,6 +18,10 @@
           <div id="logo">
             <h1>Nex<span>ora</span></h1>
           </div>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          <label for="menu-toggle" class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </label>
           <div id="menu">
             <nav>
               <ul>
@@ -25,7 +30,12 @@
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
+            <input type="checkbox" id="dark-mode-toggle">
+
             <button class="btn-3"><a href="#">Sign Up</a></button>
+                        <label for="dark-mode-toggle" class="dark-mode-label">
+              <i class="fa-solid fa-moon"></i>
+            </label>
           </div>
         </header>
         <div class="text-area">
@@ -64,7 +74,10 @@
       </div>
     </div>
   </div>
-  <div id="wave"><img src="assets/wave.png" /></div>
+  <div id="wave">
+  <img src="assets/wave.png" class="wave-light" />
+  <img src="assets/wave-dark.png" class="wave-dark" />
+</div>
   <section id="about-us">
     <div class="presentation">
       <div class="motivational">
@@ -102,11 +115,8 @@
       <div class="review">
         <img src="assets/estudante-1.jpg"> <span>
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><br>A
-          plataforma me surpreendeu bastante. As aulas são bem organizadas, fáceis de acompanhar e os conteúdos
-          realmente ajudam no aprendizado. Gostei muito da forma como tudo fica separado por módulos, porque facilita
-          bastante na hora de estudar e revisar. Para quem quer fazer um curso ou começar uma graduação com mais
-          praticidade, achei uma excelente opção.<h2>&mdash; Alex</h2>
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><br>The
+          platform surprised me greatly. The classes are well organized, easy to follow, and the content really helps with learning. I really liked how everything is separated by modules because it makes studying and reviewing much easier. For anyone wanting to take a course or start a degree with more convenience, I found it an excellent option.<h2>&mdash; Alex</h2>
         </span>
       </div>
     </div>
@@ -115,10 +125,7 @@
         <img src="assets/estudante-3.jpg"> <span>
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
               class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <br>Gostei bastante da plataforma e da qualidade dos cursos. O conteúdo é bom, os professores explicam de
-          forma clara e a navegação é simples. Minha única observação é que algumas partes poderiam ser um pouco mais
-          intuitivas, principalmente para encontrar materiais complementares. Mesmo assim, a experiência foi muito
-          positiva e vale a pena.<h2>&mdash; Ana</h2>
+          <br>I really liked the platform and the quality of the courses. The content is good, the teachers explain clearly, and the navigation is simple. My only observation is that some parts could be a bit more intuitive, especially for finding supplementary materials. Still, the experience was very positive and worth it.<h2>&mdash; Ana</h2>
         </span>
       </div>
     </div>
@@ -128,22 +135,21 @@
         <span>
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
               class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div><br>
-          A plataforma é muito boa e oferece cursos interessantes para quem quer se desenvolver ou buscar uma formação
-          melhor. O conteúdo é bem apresentado e o ambiente é agradável de navegar. Dou 4 estrelas porque acredito que
-          ainda pode melhorar em alguns detalhes de usabilidade, mas no geral é uma experiência muito boa.<h2>&mdash;
+          The platform is very good and offers interesting courses for those who want to develop or seek better training. The content is well presented and the environment is pleasant to navigate. I give 4 stars because I believe it can still improve on some usability details, but overall it's a very good experience.<h2>&mdash;
             Roberto</h2>
         </span>
       </div>
     </div>
   </div>
+  <div class="back-footer">
   <footer id="contact">
     <div class="footer-left">
       <h1>Nex<span>ora</span></h1>
       <br>
-      <h2>Construindo caminhos através do conhecimento, da inovação e de oportunidades que transformam o futuro.</h2>
-      <p>Inspirando novos começos todos os dias.</p>
+      <h2>Building paths through knowledge, innovation, and opportunities that transform the future.</h2>
+      <p>Inspiring new beginnings every day.</p>
       <p>Rodovia PR 082, s/n, Km 01 — Douradina, PR — CEP 87.485-000</p>
-      <button><a href="#main">Voltar para o inicio</a></button>
+      <button><a href="#main">Back to Top</a></button>
     </div>
     <div class="footer-middle">
       <ul>
@@ -153,12 +159,13 @@
       </ul>
     </div>
     <div class="footer-right">
-      <h1>Se inscreva</h1>
-      <p>Se junte a nossa comunidade para receber atualizações e promoções</p>
-      <input type="text" placeholder="exemplo@gmail.com">
-      <button type="submit">Envie</button>
+      <h1>Subscribe</h1>
+      <p>Join our community to receive updates and promotions</p>
+      <input type="text" placeholder="example@gmail.com">
+      <button type="submit">Send</button>
     </div>
   </footer>
+  </div>
 </body>
 
 

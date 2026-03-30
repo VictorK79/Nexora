@@ -2,16 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
-  min-height: 100vh;
-  color: var(--text-dark);
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,8 +38,11 @@ body {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   color: var(--text-dark);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -277,7 +271,9 @@ nav a:hover::before {
   margin-top: 1.5rem;
   border-radius: 20px;
   background: var(--primary);
-  transition: background 0.5s ease, color 0.5s ease;
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
 }
 .btn-2 i {
   margin-left: 0.5rem;
@@ -299,7 +295,9 @@ nav a:hover::before {
   margin-top: 1.5rem;
   border-radius: 20px;
   background: var(--secondary);
-  transition: background 0.5s ease, color 0.3s ease;
+  transition:
+    background 0.5s ease,
+    color 0.3s ease;
 }
 .btn-2:hover {
   border: 3px solid var(--border-soft);
@@ -308,7 +306,9 @@ nav a:hover::before {
 }
 .text-area .btn-1,
 .text-area .btn-2 {
-  transition: background 0.5s ease, color 0.3s ease;
+  transition:
+    background 0.5s ease,
+    color 0.3s ease;
 }
 .text-area a {
   text-decoration: none;
@@ -365,7 +365,9 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   text-align: center;
   align-content: center;
   align-items: center;
-  transition: scale 0.3s ease-out, filter 0.5s ;
+  transition:
+    scale 0.3s ease-out,
+    filter 0.5s;
 }
 .slide:hover {
   scale: 0.7;
@@ -519,21 +521,6 @@ footer {
   text-decoration: none;
   font-size: 2rem;
   transition: color 0.5s ease;
-}
-.wave-light {
-  display: block;
-}
-
-.wave-dark {
-  display: none;
-}
-
-body:has(#dark-mode-toggle:checked) .wave-light {
-  display: none;
-}
-
-body:has(#dark-mode-toggle:checked) .wave-dark {
-  display: block;
 }
 .footer-middle ul {
   line-height: 3.5rem;

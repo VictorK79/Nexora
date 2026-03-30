@@ -175,10 +175,11 @@ header #logo {
   border: 0;
   width: 6rem;
   height: 3rem;
-  transition: background 0.2s;
+  transition: background 0.5s ease;
 }
 .btn-3 a {
   color: var(--text-light);
+  transition: color 0.5s ease;
 }
 
 .btn-3:hover {
@@ -213,7 +214,7 @@ nav a::before {
   width: 100%;
   background: var(--text-dark);
   transform: scaleX(0);
-  transition: transform 0.2s linear;
+  transition: transform 0.25s linear;
 }
 nav a:hover::before {
   transform: scaleX(1);
@@ -276,6 +277,7 @@ nav a:hover::before {
   margin-top: 1.5rem;
   border-radius: 20px;
   background: var(--primary);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 .btn-2 i {
   margin-left: 0.5rem;
@@ -297,6 +299,7 @@ nav a:hover::before {
   margin-top: 1.5rem;
   border-radius: 20px;
   background: var(--secondary);
+  transition: background 0.5s ease, color 0.3s ease;
 }
 .btn-2:hover {
   border: 3px solid var(--border-soft);
@@ -305,12 +308,13 @@ nav a:hover::before {
 }
 .text-area .btn-1,
 .text-area .btn-2 {
-  transition: background 0.2s;
+  transition: background 0.5s ease, color 0.3s ease;
 }
 .text-area a {
   text-decoration: none;
   color: var(--white);
   font-size: large;
+  transition: color 0.3s ease;
 }
 .text-area span {
   color: var(--secondary);

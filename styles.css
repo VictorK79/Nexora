@@ -1,12 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  min-height: 100vh;
+  color: var(--text-dark);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease;
 }
+
 :root {
   --header-bg: rgba(255, 255, 255, 0.55);
   --bg-main: #18b4ff;
@@ -51,13 +62,11 @@ header {
   border-radius: 15px;
   padding: 1rem;
   width: min(85%, var(--max-content-width));
-  background: var(--header-bg);
+  background-color: var(--header-bg);
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(3px);
-  transition:
-    border-radius 0.3s ease,
-    background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 #menu {
@@ -187,12 +196,28 @@ header ul li {
   margin: 0 1rem;
 }
 header a {
+  position: relative;
   text-decoration: none;
   color: var(--text-dark);
-  transition: color 0.2s;
+  transition: color 0.5s ease;
 }
 header nav a:hover {
   color: var(--bg-main);
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 5px;
+  width: 100%;
+  background: var(--text-dark);
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+nav a:hover::before {
+  transform: scaleX(1);
+  background: var(--bg-main);
 }
 #main {
   margin: 0 auto;
@@ -216,6 +241,7 @@ header nav a:hover {
   color: var(--text-dark);
   margin-top: 2.5rem;
   width: 40rem;
+  transition: color 0.5s ease;
 }
 .text-area h1 {
   font-size: 4rem;
@@ -335,9 +361,10 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   text-align: center;
   align-content: center;
   align-items: center;
-  transition: filter 0.2s;
+  transition: scale 0.3s ease-out, filter 0.5s ;
 }
 .slide:hover {
+  scale: 0.7;
   filter: grayscale(0);
 }
 .group {
@@ -369,6 +396,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   color: var(--text-dark);
   text-decoration: none;
   font-size: 1.75rem;
+  transition: color 0.5s ease;
 }
 .card:hover {
   background: var(--primary-dark);
@@ -395,6 +423,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   color: var(--text-dark);
   justify-content: space-between;
   align-items: center;
+  transition: color 0.5s ease;
 }
 #statistics p {
   font-size: 1.2rem;
@@ -451,6 +480,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   margin: 1rem 0 0 4rem;
   width: 80%;
   font-size: 1.3rem;
+  transition: color 0.5s ease;
 }
 #students-rating {
   width: 100%;
@@ -484,7 +514,7 @@ footer {
   list-style: none;
   text-decoration: none;
   font-size: 2rem;
-  transition: color 0.3s;
+  transition: color 0.5s ease;
 }
 .wave-light {
   display: block;
@@ -522,6 +552,7 @@ body:has(#dark-mode-toggle:checked) .wave-dark {
 .footer-left a {
   text-decoration: none;
   color: var(--text-dark);
+  transition: color 0.5s ease;
 }
 .footer-left button {
   background: var(--text-light);

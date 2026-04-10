@@ -32,6 +32,7 @@ html {
   --footer-2: rgba(8, 34, 48, 1);
   --footer-3: rgba(13, 70, 97, 1);
   --max-content-width: 2400px;
+  --box-shadow: 0 8px 24px rgba(9, 146, 194, 0.2);
 }
 
 body {
@@ -75,7 +76,9 @@ header {
 #dark-mode-toggle {
   display: none;
 }
-
+#social-proof {
+  background-color: var(--white);
+}
 body:has(#dark-mode-toggle:checked) {
   --header-bg: rgba(49, 49, 62, 0.95);
   --bg-main: #0a1f2e;
@@ -98,6 +101,7 @@ body:has(#dark-mode-toggle:checked) {
   --footer-1: rgb(10, 48, 66);
   --footer-2: rgb(14, 34, 44);
   --footer-3: rgb(10, 48, 66);
+  --box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
 }
 
 .dark-mode-label {
@@ -397,6 +401,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   padding: 1rem;
   background: var(--bg-card-dark);
   transition: background 0.25s;
+  
 }
 .card a {
   color: var(--text-dark);
@@ -408,6 +413,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   background: var(--primary-dark);
 }
 #about-us {
+  
   width: 100%;
   background: var(--bg-main);
   display: flex;
@@ -439,10 +445,11 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
 #statistics li {
   list-style-type: none;
   font-size: 1.25rem;
-  line-height: 1.85rem;
+  line-height: 2rem;
 }
 
 #statistics {
+  
   width: 35%;
   flex-direction: column;
 }
@@ -450,6 +457,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   color: var(--secondary);
 }
 .motivational {
+  
   max-width: 35%;
 }
 .motivational h1 {
@@ -466,6 +474,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   margin: 0 0 0 1rem;
 }
 .student {
+  
   margin: 0 auto;
   width: min(100%, var(--max-content-width));
   display: flex;
@@ -489,6 +498,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
   transition: color 0.5s ease;
 }
 #students-rating {
+  
   width: 100%;
   background: #0d4661;
   background: linear-gradient(0deg, var(--footer-1) 0%, var(--bg-main) 100%);
@@ -631,8 +641,10 @@ footer span {
   #cards {
     flex-direction: column;
     width: 100%;
+    
   }
   .card {
+    
     font-size: 0.75rem;
     margin-top: 3rem;
     width: 100%;

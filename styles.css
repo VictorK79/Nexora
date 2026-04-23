@@ -393,7 +393,7 @@ nav a:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: spin 10s linear infinite;
+  animation: spin 9s linear infinite;
 }
 
 .slide {
@@ -504,6 +504,18 @@ nav a:hover::before {
   width: min(100%, var(--max-content-width));
   justify-content: space-between;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .card {
   cursor: pointer;

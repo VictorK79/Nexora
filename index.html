@@ -1,177 +1,264 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexora</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-
-<body>
-
-  <div class="top-background">
-    <section id="main">
-      <div class="pagina-principal">
-        <header>
-          <div id="logo">
-            <h1>Nex<span>ora</span></h1>
-          </div>
-          <input type="checkbox" id="menu-toggle" class="menu-toggle">
-          <label for="menu-toggle" class="hamburger">
-            <i class="fa-solid fa-bars"></i>
-          </label>
-          <div id="menu">
-            <nav aria-label="Menu de navegação">
-              <ul>
-                <li><a href="#main">Início</a></li>
-                <li><a href="#about-us">Sobre nós</a></li>
-                <li><a href="#contact">Contato</a></li>
-              </ul>
-            </nav>
-            <input type="checkbox" id="dark-mode-toggle">
-
-            <a href="#" class="btn-3">Inscreva-se</a>
-            <label for="dark-mode-toggle" class="dark-mode-label" aria-label="Alternar modo escuro">
-              <i class="fa-solid fa-moon"></i>
+  <body>
+    <div class="top-background">
+      <section id="main">
+        <div class="pagina-principal">
+          <header>
+            <div id="logo">
+              <h1>Nex<span>ora</span></h1>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">
+              <i class="fa-solid fa-bars"></i>
             </label>
+            <div id="menu">
+              <nav aria-label="Menu de navegação">
+                <ul>
+                  <li><a href="#main">Início</a></li>
+                  <li><a href="#about-us">Sobre nós</a></li>
+                  <li><a href="#contact">Contato</a></li>
+                </ul>
+              </nav>
+              <input type="checkbox" id="dark-mode-toggle" />
+
+              <a href="#" class="btn-3">Inscreva-se</a>
+              <label
+                for="dark-mode-toggle"
+                class="dark-mode-label"
+                aria-label="Alternar modo escuro"
+              >
+                <i class="fa-solid fa-moon"></i>
+              </label>
+            </div>
+          </header>
+          <div class="text-area">
+            <h1>Transformando <span>ideias</span> em soluções digitais</h1>
+            <p>
+              Criamos experiências digitais modernas, rápidas e eficientes para
+              ajudar seu negócio a crescer e se destacar no mundo online.
+            </p>
+            <div class="buttons">
+              <a href="#" class="btn-1">Começar</a>
+              <a href="#" class="btn-2"
+                >Saiba mais<i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
           </div>
-        </header>
-        <div class="text-area">
-          <h1>Transformando <span>ideias</span> em soluções digitais</h1>
-          <p>
-            Criamos experiências digitais modernas, rápidas e eficientes para ajudar
-            seu negócio a crescer e se destacar no mundo online.
-          </p>
-          <div class="buttons">
-            <a href="#" class="btn-1">Começar</a>
-            <a href="#" class="btn-2">Saiba mais<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <div class="image-area">
+            <div class="block">
+              <img src="assets/student-man-nbg.png" alt="Pessoa estudando" />
+            </div>
           </div>
         </div>
-        <div class="image-area">
-          <div class="block">
-            <img src="assets/student-man-nbg.png" alt="Pessoa estudando" />
+      </section>
+    </div>
+    <div id="social-proof">
+      <div class="carousel">
+        <div class="group">
+          <div class="slide">
+            <img src="assets/Codecademy.png" alt="Logo Codecademy" />
           </div>
+          <div class="slide">
+            <img src="assets/Gazin.png" alt="Logo Gazin" />
+          </div>
+          <div class="slide">
+            <img src="assets/KhanAcademy.png" alt="Logo Khan Academy" />
+          </div>
+          <div class="slide">
+            <img src="assets/Google.png" alt="Logo Google" />
+          </div>
+        </div>
+        <div class="group">
+          <div class="slide">
+            <img src="assets/Codecademy.png" alt="Logo Codecademy" />
+          </div>
+          <div class="slide">
+            <img src="assets/Gazin.png" alt="Logo Gazin" />
+          </div>
+          <div class="slide">
+            <img src="assets/KhanAcademy.png" alt="Logo Khan Academy" />
+          </div>
+          <div class="slide">
+            <img src="assets/Google.png" alt="Logo Google" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wave">
+      <img
+        src="assets/wave.png"
+        class="wave wave-light"
+        alt="Ilustração de ondas claras"
+      />
+      <img
+        src="assets/wave-dark.png"
+        class="wave wave-dark"
+        alt="Ilustração de ondas escuras"
+      />
+    </div>
+    <section id="about-us">
+      <div class="presentation">
+        <div class="motivational">
+          <h1>Equipes ao redor do mundo confiam na Nex<span>ora</span></h1>
+          <p>
+            Descubra cursos de alta qualidade pensados para ajudar você a
+            desenvolver habilidades, conquistar certificações e avançar na
+            carreira. Aprenda no seu ritmo com orientação de especialistas e
+            ferramentas modernas.
+          </p>
+        </div>
+        <div id="statistics">
+          <h2>Nosso ecossistema de aprendizado</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-bookmark"></i> &nbsp;<strong>500+</strong>
+              cursos disponíveis para ajudar você a construir novas
+              competências.
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i> &nbsp;<strong>50.000+</strong>
+              alunos aprendendo e evoluindo com a Nexora.
+            </li>
+            <li>
+              <i class="fa-solid fa-earth-americas"> &nbsp;</i
+              ><strong>120+</strong> instrutores certificados compartilhando
+              conhecimento prático.
+            </li>
+          </ul>
+          <p>
+            Nossa missão é tornar a educação de alta qualidade acessível para
+            todos, em qualquer lugar.
+          </p>
+          <br />
+        </div>
+      </div>
+
+      <div id="cards">
+        <div class="card">
+          <a href="#">Inicie uma carreira</a>
+          <h1><i class="fa-solid fa-graduation-cap"></i></h1>
+        </div>
+        <div class="card">
+          <a href="#">Conquiste seu diploma</a>
+          <h1><i class="fa-solid fa-certificate"></i></h1>
+        </div>
+        <div class="card">
+          <a href="#">Explore nossos cursos</a>
+          <h1><i class="fa-solid fa-book"></i></h1>
+        </div>
+      </div>
+      <div id="list-courses"> 
+        <div class="courses">
+          <!-- Terminar -->
         </div>
       </div>
     </section>
-  </div>
-  <div id="social-proof">
-    <div class="carousel">
-      <div class="group">
-        <div class="slide"><img src="assets/Codecademy.png" alt="Logo Codecademy" /></div>
-        <div class="slide"><img src="assets/Gazin.png" alt="Logo Gazin" /></div>
-        <div class="slide"><img src="assets/KhanAcademy.png" alt="Logo Khan Academy" /></div>
-        <div class="slide"><img src="assets/Google.png" alt="Logo Google" /></div>
+    <div id="students-rating">
+      <div class="student">
+        <div class="review">
+          <img src="assets/estudante-1.jpg" alt="Depoimento de Alex" />
+          <span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <br />A plataforma me surpreendeu muito. As aulas são bem
+            organizadas, fáceis de acompanhar e o conteúdo realmente ajuda no
+            aprendizado. Gostei bastante de como tudo é dividido por módulos,
+            pois facilita estudar e revisar. Para quem quer fazer um curso ou
+            iniciar uma formação com mais conveniência, achei uma opção
+            excelente.
+            <h2>&mdash; Alex</h2>
+          </span>
+        </div>
       </div>
-      <div class="group">
-        <div class="slide"><img src="assets/Codecademy.png" alt="Logo Codecademy" /></div>
-        <div class="slide"><img src="assets/Gazin.png" alt="Logo Gazin" /></div>
-        <div class="slide"><img src="assets/KhanAcademy.png" alt="Logo Khan Academy" /></div>
-        <div class="slide"><img src="assets/Google.png" alt="Logo Google" /></div>
+      <div class="student">
+        <div class="review">
+          <img src="assets/estudante-3.jpg" alt="Depoimento de Ana" />
+          <span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <br />Gostei muito da plataforma e da qualidade dos cursos. O
+            conteúdo é bom, os professores explicam com clareza e a navegação é
+            simples. Minha única observação é que algumas áreas podem ser um
+            pouco mais intuitivas, especialmente para encontrar materiais
+            complementares. Mesmo assim, a experiência foi muito positiva e
+            valeu a pena.
+            <h2>&mdash; Ana</h2>
+          </span>
+        </div>
       </div>
-      
-    </div>
-  </div>
-  <div id="wave">
-  <img src="assets/wave.png" class="wave wave-light" alt="Ilustração de ondas claras" />
-  <img src="assets/wave-dark.png" class="wave wave-dark" alt="Ilustração de ondas escuras" />
-</div>
-  <section id="about-us">
-    <div class="presentation">
-      <div class="motivational">
-        <h1>Equipes ao redor do mundo confiam na Nex<span>ora</span></h1>
-        <p>Descubra cursos de alta qualidade pensados para ajudar você a desenvolver habilidades, conquistar certificações e avançar na carreira.
-          Aprenda no seu ritmo com orientação de especialistas e ferramentas modernas.</p>
-      </div>
-      <div id="statistics">
-        <h2>Nosso ecossistema de aprendizado</h2>
-        <ul>
-          
-          <li><i class="fa-solid fa-bookmark"></i> 	&nbsp;<strong>500+</strong> cursos disponíveis para ajudar você a construir novas competências.
-          </li>
-          <li><i class="fa-solid fa-users"></i> 	&nbsp;<strong>50.000+</strong> alunos aprendendo e evoluindo com a Nexora.</li>
-          <li><i class="fa-solid fa-earth-americas"> 	&nbsp;</i><strong>120+</strong> instrutores certificados compartilhando conhecimento prático.
-            </li>
-        </ul>
-        <p>Nossa missão é tornar a educação de alta qualidade acessível para todos, em qualquer lugar.</p>
-        <br>
-      </div>
-
-    </div>
-    <div id="cards">
-      <div class="card"><a href="#">Inicie uma carreira</a>
-        <h1><i class="fa-solid fa-graduation-cap"></i></h1>
-      </div>
-      <div class="card"><a href="#">Conquiste seu diploma</a>
-        <h1><i class="fa-solid fa-certificate"></i></h1>
-      </div>
-      <div class="card"><a href="#">Explore nossos cursos</a>
-        <h1><i class="fa-solid fa-book"></i></h1>
-      </div>
-    </div>
-  </section>
-  <div id="students-rating">
-    <div class="student">
-      <div class="review">
-        <img src="assets/estudante-1.jpg" alt="Depoimento de Alex"> <span>
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><br>A
-          plataforma me surpreendeu muito. As aulas são bem organizadas, fáceis de acompanhar e o conteúdo realmente ajuda no aprendizado. Gostei bastante de como tudo é dividido por módulos, pois facilita estudar e revisar. Para quem quer fazer um curso ou iniciar uma formação com mais conveniência, achei uma opção excelente.<h2>&mdash; Alex</h2>
-        </span>
+      <div class="student">
+        <div class="review">
+          <img src="assets/estudante-5.jpg" alt="Depoimento de Roberto" />
+          <span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-regular fa-star"></i>
+            </div>
+            <br />
+            A plataforma é muito boa e oferece cursos interessantes para quem
+            quer se desenvolver ou buscar uma formação melhor. O conteúdo é bem
+            apresentado e o ambiente é agradável de navegar. Dou 4 estrelas
+            porque acredito que ainda pode melhorar alguns detalhes de
+            usabilidade, mas, no geral, é uma experiência ótima.
+            <h2>&mdash; Roberto</h2>
+          </span>
+        </div>
       </div>
     </div>
-    <div class="student">
-      <div class="review">
-        <img src="assets/estudante-3.jpg" alt="Depoimento de Ana"> <span>
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <br>Gostei muito da plataforma e da qualidade dos cursos. O conteúdo é bom, os professores explicam com clareza e a navegação é simples. Minha única observação é que algumas áreas podem ser um pouco mais intuitivas, especialmente para encontrar materiais complementares. Mesmo assim, a experiência foi muito positiva e valeu a pena.<h2>&mdash; Ana</h2>
-        </span>
-      </div>
+    <div class="back-footer">
+      <footer id="contact">
+        <div class="footer-left">
+          <h1>Nex<span>ora</span></h1>
+          <br />
+          <h2>
+            Construindo caminhos por meio do conhecimento, da inovação e de
+            oportunidades que transformam o futuro.
+          </h2>
+          <p>Inspirando novos começos todos os dias.</p>
+          <p>Rodovia PR 082, s/n, Km 01 — Douradina, PR — CEP 87.485-000</p>
+          <a href="#main" class="btn-3">Voltar ao topo</a>
+        </div>
+        <div class="footer-middle">
+          <ul>
+            <li><a href="#main">Início</a></li>
+            <li><a href="#about-us">Sobre nós</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h1>Assine</h1>
+          <p>Junte-se à nossa comunidade para receber novidades e promoções</p>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="email" class="sr-only">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@gmail.com"
+            />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </footer>
     </div>
-    <div class="student">
-      <div class="review">
-        <img src="assets/estudante-5.jpg" alt="Depoimento de Roberto">
-        <span>
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div><br>
-          A plataforma é muito boa e oferece cursos interessantes para quem quer se desenvolver ou buscar uma formação melhor. O conteúdo é bem apresentado e o ambiente é agradável de navegar. Dou 4 estrelas porque acredito que ainda pode melhorar alguns detalhes de usabilidade, mas, no geral, é uma experiência ótima.<h2>&mdash;
-            Roberto</h2>
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="back-footer">
-  <footer id="contact">
-    <div class="footer-left">
-      <h1>Nex<span>ora</span></h1>
-      <br>
-      <h2>Construindo caminhos por meio do conhecimento, da inovação e de oportunidades que transformam o futuro.</h2>
-      <p>Inspirando novos começos todos os dias.</p>
-      <p>Rodovia PR 082, s/n, Km 01 — Douradina, PR — CEP 87.485-000</p>
-      <a href="#main" class="btn-3">Voltar ao topo</a>
-    </div>
-    <div class="footer-middle">
-      <ul>
-        <li><a href="#main">Início</a></li>
-        <li><a href="#about-us">Sobre nós</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <h1>Assine</h1>
-      <p>Junte-se à nossa comunidade para receber novidades e promoções</p>
-      <form class="newsletter-form" action="#" method="post">
-        <label for="email" class="sr-only">Email</label>
-        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </footer>
-  </div>
-</body>
-
-
+  </body>
 </html>

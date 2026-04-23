@@ -87,7 +87,7 @@ body:has(#dark-mode-toggle:checked) #wave .wave-dark {
 }
 
 header {
-  z-index: 1;
+  z-index: 3;
   top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -564,20 +564,21 @@ nav a:hover::before {
 .manual-navigation {
   position: absolute;
   left: 0;
-  bottom: 12px;
-  width: 100%;
+  bottom: 20px;
+  width: 93.5%;
   display: flex;
   justify-content: center;
-  z-index: 3;
+  z-index: 2;
 }
 
 .manual-btn {
-  border: 2px solid #fff;
-  width: 14px;
-  height: 14px;
+  border: 2px solid rgb(205, 205, 205);
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  background: #ffffff3e;
 }
 
 .manual-btn:not(:last-child) {
@@ -591,8 +592,8 @@ nav a:hover::before {
 .navigation-auto {
   position: absolute;
   left: 0;
-  bottom: 12px;
-  width: 100%;
+  bottom: 20px;
+  width: 93.5%;
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -600,16 +601,14 @@ nav a:hover::before {
 
 .navigation-auto div {
   border: 2px solid #fff;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   transition: 0.3s;
 }
-
 .navigation-auto div:not(:last-child) {
   margin-right: 18px;
 }
-
 #radio1:checked ~ .list-courses .first {
   margin-left: 0;
 }
@@ -628,7 +627,6 @@ nav a:hover::before {
 #radio6:checked ~ .list-courses .first {
   margin-left: -83.3334%;
 }
-
 #radio1:checked ~ .list-courses .navigation-auto .auto-btn1 {
   background: #fff;
 }
@@ -652,43 +650,36 @@ nav a:hover::before {
   position: absolute;
   left: 0;
   top: 0;
-
-  width: 100%;
+  width: 90%;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.9);
   color: #222;
   text-align: center;
   border-radius: 0 0 1rem 1rem;
-  z-index: 1;
+  z-index: 0;
 }
-
 .text-white-bg p {
   color: #222;
-  font-weight: 700;
 }
-
 .course-side-info {
   min-height: 400px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 1.2rem;
   padding: 1.5rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
 .course-info {
   display: none;
 }
-
 .course-info h3 {
   font-size: 2rem;
-  margin: 0.8rem 0;
+  margin: 0 0 1rem 0;
   color: var(--text-dark);
 }
-
 .course-info p {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -710,13 +701,14 @@ nav a:hover::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 130px;
-  height: 44px;
-  padding: 0 1rem;
+  min-width: 150px;
+  height: 30px;
+  padding: 2rem;
   border-radius: 12px;
   background: var(--primary-dark);
   color: var(--text-light);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .course-link:hover {
@@ -743,6 +735,9 @@ nav a:hover::before {
 }
 
 @media screen and (max-width: 900px) {
+  .image-area {
+    display: none;
+  }
   .courses-showcase {
     grid-template-columns: 1fr;
     gap: 0.3rem;
@@ -757,7 +752,7 @@ nav a:hover::before {
   }
 
   .course img {
-    height: 220px;
+    height: 300px;
   }
 }
 .card {
@@ -765,9 +760,9 @@ nav a:hover::before {
   display: flex;
   justify-content: space-around;
   border-radius: 15px;
-  width: 25vw;
+  width: 32%;
   align-items: center;
-  height: 10vh;
+  height: 5rem;
   padding: 1rem;
   background: var(--bg-card-dark);
   transition: 0.5s;
@@ -776,7 +771,7 @@ nav a:hover::before {
 .card a {
   color: var(--text-dark);
   text-decoration: none;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   transition: color 0.5s ease;
 }
 
@@ -876,7 +871,7 @@ footer span {
 .footer-left a {
   text-decoration: none;
   color: var(--text-dark);
-  transition: color 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .footer-left button {
@@ -934,6 +929,7 @@ footer span {
   width: 95%;
   padding: 1rem;
   font-size: 1rem;
+  color: var(--text-dark);
   background-color: var(--text-light);
 }
 
@@ -949,6 +945,7 @@ footer span {
 }
 
 @media screen and (max-width: 600px) {
+  
   .hamburger {
     display: flex;
   }
@@ -960,7 +957,7 @@ footer span {
   }
   .manual-navigation,
   .navigation-auto {
-    width: 90%;
+    width: 100%;
     left: 0;
   }
   header {

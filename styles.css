@@ -508,7 +508,7 @@ nav a:hover::before {
   width: min(100%, var(--max-content-width));
   margin: 4rem auto 0;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(280px, 380px);
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 380px);
   gap: 2rem;
   align-items: center;
 }
@@ -532,13 +532,13 @@ nav a:hover::before {
 
 .list-courses {
   width: 100%;
-  max-width: 800px;
   margin: 0;
   overflow: hidden;
   position: relative;
 }
 
 .courses {
+  margin: 0 1rem;
   width: 600%;
   display: flex;
   height: auto;
@@ -546,8 +546,8 @@ nav a:hover::before {
 }
 
 .course {
-  flex: 0 0 16.6667%;
-  max-width: 16.6667%;
+  flex: 0 0 16.67%;
+  max-width: 16.67%;
   position: relative;
   transition: 0.8s;
   border-radius: 1rem;
@@ -555,7 +555,7 @@ nav a:hover::before {
 
 .course img {
   width: 90%;
-  height: 400px;
+  height: 520px;
   display: block;
   object-fit: cover;
   border-radius: 1rem;
@@ -622,10 +622,10 @@ nav a:hover::before {
   margin-left: -50%;
 }
 #radio5:checked ~ .list-courses .first {
-  margin-left: -66.6667%;
+  margin-left: -66.67%;
 }
 #radio6:checked ~ .list-courses .first {
-  margin-left: -83.3334%;
+  margin-left: -83.34%;
 }
 #radio1:checked ~ .list-courses .navigation-auto .auto-btn1 {
   background: #fff;
@@ -690,7 +690,7 @@ nav a:hover::before {
 .course-tag {
   display: inline-block;
   padding: 0.4rem 0.8rem;
-  border-radius: 999px;
+  border-radius: 99px;
   background: var(--secondary);
   color: #07313f;
   font-weight: 700;
